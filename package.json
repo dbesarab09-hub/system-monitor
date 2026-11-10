@@ -1,0 +1,1 @@
+{"description":"Lightweight system monitor (CPU, RAM, GPU, disks, temperatures) built with Rust + Tauri. Fully offline, no telemetry.","devDependencies":{"@tauri-apps/cli":"^2"},"name":"system-monitor","private":true,"scripts":{"build":"tauri build","dev":"tauri dev","icons":"node scripts/make-icons.mjs","tauri":"tauri"},"version":"0.1.0"}
