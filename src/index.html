@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Monitor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>System Monitor</h1>
+      <span id="uptime" class="muted">аптайм: —</span>
+    </header>
+
+    <main>
+      <section class="card">
+        <div class="card-head">
+          <h2>Процессор</h2>
+          <span id="cpu-usage" class="big">—%</span>
+        </div>
+        <p id="cpu-brand" class="muted">—</p>
+        <canvas id="cpu-chart" class="chart"></canvas>
+        <div id="core-bars"></div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Память</h2>
+          <span id="mem-text" class="big">—</span>
+        </div>
+        <div class="bar"><div id="mem-bar" class="bar-fill"></div></div>
+        <canvas id="mem-chart" class="chart"></canvas>
+        <p id="swap-text" class="muted">—</p>
+      </section>
+
+      <section class="card">
+        <h2>Диски</h2>
+        <div id="disk-list"></div>
+      </section>
+
+      <section class="card">
+        <h2>Температуры</h2>
+        <div id="temp-list"></div>
+        <p class="muted small">
+          На Windows датчики могут быть недоступны без прав администратора —
+          это ограничение доступа к сенсорам, а не ошибка.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Система</h2>
+        <div id="sys-info"></div>
+        <h3>Видеокарта</h3>
+        <div id="gpu-list"></div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
